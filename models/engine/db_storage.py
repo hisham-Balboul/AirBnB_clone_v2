@@ -33,7 +33,7 @@ class DBStorage:
             Base.metadata.drop_all(self.__engine)
 
     def all(self, cls=None):
-        """Query on the curret database session all objects of the given class"""
+        """Query on the current db session all objects of the given class"""
         if cls is None:
             objs = self.__session.query(State).all()
             objs.extend(self.__session.query(City).all())
